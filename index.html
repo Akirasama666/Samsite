@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ══════════════════════════ SEO ══════════════════════════ -->
+  <title>Samael — Consultas Esotéricas, Tarot e Leitura de Sombra</title>
+  <meta name="description" content="Consultas esotéricas, tarot, tiragens, leitura de sombra, consulta vampírica e orientação simbólica com Samael, The Black Serpent.">
+  <meta name="theme-color" content="#050505">
+  <meta property="og:title" content="Samael — The Black Serpent">
+  <meta property="og:description" content="Consultas esotéricas, tarot, leituras de sombra e orientação simbólica para quem busca clareza, poder pessoal e direção.">
+  <meta property="og:type" content="website">
+
+  <!-- Tipografia -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Cinzel:wght@400;500;600&family=Spectral:ital,wght@0,200;0,300;0,400;1,300&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon: sigilo solar em SVG inline -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23B8945A' stroke-width='1.2'/%3E%3Ccircle cx='16' cy='16' r='2.4' fill='%23B8945A'/%3E%3Cg stroke='%23B8945A' stroke-width='1'%3E%3Cpath d='M16 2v5M16 25v5M2 16h5M25 16h5M6 6l3.5 3.5M22.5 22.5L26 26M26 6l-3.5 3.5M9.5 22.5L6 26'/%3E%3C/g%3E%3C/svg%3E">
+</head>
+<body>
+
+  <!-- Véu de entrada (fade cinematográfico) -->
+  <div class="veil" aria-hidden="true"></div>
+
+  <!-- Névoa e partículas de fundo -->
+  <div class="atmosphere" aria-hidden="true">
+    <div class="mist mist--1"></div>
+    <div class="mist mist--2"></div>
+    <div class="ember ember--1"></div>
+    <div class="ember ember--2"></div>
+    <div class="ember ember--3"></div>
+    <div class="ember ember--4"></div>
+    <div class="ember ember--5"></div>
+    <div class="ember ember--6"></div>
+    <div class="ember ember--7"></div>
+  </div>
+
+  <!-- Cursor dourado (somente desktop) -->
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ══════════════════════════ NAVEGAÇÃO ══════════════════════════ -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#inicio" aria-label="Samael — voltar ao início">
+      <svg class="nav__sigil" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="7" fill="none" stroke="currentColor" stroke-width="1"/>
+        <circle cx="16" cy="16" r="2" fill="currentColor"/>
+        <g stroke="currentColor" stroke-width=".8">
+          <path d="M16 3v4M16 25v4M3 16h4M25 16h4M7 7l3 3M22 22l3 3M25 7l-3 3M10 22l-3 3"/>
+        </g>
+      </svg>
+      <span>SAMAEL</span>
+    </a>
+
+    <nav class="nav__links" id="navLinks" aria-label="Navegação principal">
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#consultas">Consultas</a>
+      <a href="#contato">Contato</a>
+      <a href="#contato" class="nav__cta" data-whatsapp data-msg="Olá, Samael. Gostaria de agendar uma consulta.">Consultar</a>
+    </nav>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main id="conteudo">
+
+  <!-- ══════════════════════════ 1 · HERO ══════════════════════════ -->
+  <section class="hero" id="inicio">
+
+    <!-- Serpente (parallax) -->
+    <div class="hero__serpent parallax" data-depth="14" aria-hidden="true">
+      <svg viewBox="0 0 900 700" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="serpentBody" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#101013"/>
+            <stop offset=".45" stop-color="#1c1c21"/>
+            <stop offset=".55" stop-color="#26262c"/>
+            <stop offset=".72" stop-color="#141417"/>
+            <stop offset="1" stop-color="#0a0a0c"/>
+          </linearGradient>
+          <linearGradient id="serpentSheen" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#B8945A" stop-opacity="0"/>
+            <stop offset=".5" stop-color="#B8945A" stop-opacity=".35"/>
+            <stop offset="1" stop-color="#B8945A" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <!-- corpo -->
+        <path class="serpent-path" d="M -60 620 C 140 640, 260 520, 300 420 C 345 310, 250 250, 330 170 C 410 90, 560 120, 610 210 C 660 300, 580 380, 660 440 C 740 500, 880 460, 960 380"
+              fill="none" stroke="url(#serpentBody)" stroke-width="56" stroke-linecap="round"/>
+        <!-- brilho da escama -->
+        <path class="serpent-sheen" d="M -60 620 C 140 640, 260 520, 300 420 C 345 310, 250 250, 330 170 C 410 90, 560 120, 610 210 C 660 300, 580 380, 660 440 C 740 500, 880 460, 960 380"
+              fill="none" stroke="url(#serpentSheen)" stroke-width="3" stroke-linecap="round"/>
+        <!-- olho -->
+        <circle cx="612" cy="208" r="3.2" fill="#B8945A" opacity=".85"/>
+      </svg>
+    </div>
+
+    <!-- Flores escuras nos cantos -->
+    <div class="hero__flora hero__flora--left parallax" data-depth="26" aria-hidden="true">
+      <svg viewBox="0 0 300 300">
+        <defs>
+          <radialGradient id="petalWine" cx=".5" cy=".4" r=".8">
+            <stop offset="0" stop-color="#6E0F14"/>
+            <stop offset=".65" stop-color="#3A0508"/>
+            <stop offset="1" stop-color="#150204"/>
+          </radialGradient>
+        </defs>
+        <g class="flower">
+          <ellipse cx="150" cy="150" rx="46" ry="86" fill="url(#petalWine)" transform="rotate(0 150 150)"/>
+          <ellipse cx="150" cy="150" rx="46" ry="86" fill="url(#petalWine)" transform="rotate(60 150 150)" opacity=".92"/>
+          <ellipse cx="150" cy="150" rx="46" ry="86" fill="url(#petalWine)" transform="rotate(120 150 150)" opacity=".85"/>
+          <ellipse cx="150" cy="150" rx="34" ry="62" fill="url(#petalWine)" transform="rotate(30 150 150)" opacity=".95"/>
+          <ellipse cx="150" cy="150" rx="34" ry="62" fill="url(#petalWine)" transform="rotate(90 150 150)" opacity=".9"/>
+          <ellipse cx="150" cy="150" rx="34" ry="62" fill="url(#petalWine)" transform="rotate(150 150 150)" opacity=".85"/>
+          <circle cx="150" cy="150" r="14" fill="#1a0305"/>
+          <circle cx="150" cy="150" r="5" fill="#B8945A" opacity=".5"/>
+        </g>
+      </svg>
+    </div>
+    <div class="hero__flora hero__flora--right parallax" data-depth="20" aria-hidden="true">
+      <svg viewBox="0 0 300 300">
+        <g class="flower flower--slow">
+          <ellipse cx="150" cy="150" rx="40" ry="78" fill="url(#petalWine)" transform="rotate(15 150 150)"/>
+          <ellipse cx="150" cy="150" rx="40" ry="78" fill="url(#petalWine)" transform="rotate(75 150 150)" opacity=".9"/>
+          <ellipse cx="150" cy="150" rx="40" ry="78" fill="url(#petalWine)" transform="rotate(135 150 150)" opacity=".82"/>
+          <ellipse cx="150" cy="150" rx="28" ry="54" fill="url(#petalWine)" transform="rotate(45 150 150)" opacity=".95"/>
+          <ellipse cx="150" cy="150" rx="28" ry="54" fill="url(#petalWine)" transform="rotate(105 150 150)" opacity=".88"/>
+          <circle cx="150" cy="150" r="11" fill="#1a0305"/>
+          <circle cx="150" cy="150" r="4" fill="#B8945A" opacity=".45"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="hero__content">
+      <!-- Sigilo solar -->
+      <div class="hero__emblem" aria-hidden="true">
+        <svg viewBox="0 0 120 120">
+          <circle cx="60" cy="60" r="30" fill="none" stroke="#B8945A" stroke-width=".8" opacity=".9"/>
+          <circle cx="60" cy="60" r="38" fill="none" stroke="#B8945A" stroke-width=".4" opacity=".45" stroke-dasharray="2 5"/>
+          <circle cx="60" cy="60" r="8" fill="none" stroke="#B8945A" stroke-width=".8"/>
+          <circle cx="60" cy="60" r="2.2" fill="#B8945A"/>
+          <g stroke="#B8945A" stroke-width=".7" opacity=".85">
+            <path d="M60 8v14M60 98v14M8 60h14M98 60h14"/>
+            <path d="M24 24l9 9M87 87l9 9M96 24l-9 9M33 87l-9 9"/>
+          </g>
+          <!-- crescentes laterais -->
+          <path d="M18 60a8 8 0 0 1 0 .01M104 60" stroke="none"/>
+          <path d="M30 78 A26 26 0 0 1 30 42 A20 20 0 0 0 30 78Z" fill="#B8945A" opacity=".35"/>
+          <path d="M90 42 A26 26 0 0 1 90 78 A20 20 0 0 0 90 42Z" fill="#B8945A" opacity=".35"/>
+        </svg>
+      </div>
+
+      <p class="hero__overline reveal-load" style="--d:.2s">Consultas esotéricas · Leitura simbólica</p>
+
+      <h1 class="hero__title" aria-label="Samael">
+        <span class="hero__letter" style="--i:0">S</span><span class="hero__letter" style="--i:1">A</span><span class="hero__letter" style="--i:2">M</span><span class="hero__letter" style="--i:3">A</span><span class="hero__letter" style="--i:4">E</span><span class="hero__letter" style="--i:5">L</span>
+      </h1>
+
+      <p class="hero__subtitle reveal-load" style="--d:1.1s">Lennart <span class="dot">·</span> The Black Serpent</p>
+
+      <div class="hero__rule reveal-load" style="--d:1.35s" aria-hidden="true"></div>
+
+      <p class="hero__quote reveal-load" style="--d:1.5s">“O que você chama de destino pode ser apenas um padrão<br class="br-desktop"> que ainda não aprendeu a ler.”</p>
+
+      <p class="hero__lead reveal-load" style="--d:1.7s">Consultas esotéricas, tarot, leituras de sombra e orientação simbólica para quem busca clareza, poder pessoal e direção em meio ao caos.</p>
+
+      <div class="hero__actions reveal-load" style="--d:1.9s">
+        <a class="btn btn--gold" href="#contato" data-whatsapp data-msg="Olá, Samael. Gostaria de agendar uma consulta." aria-label="Consultar pelo WhatsApp">
+          <span>Consultar pelo WhatsApp</span>
+        </a>
+        <a class="btn btn--ghost" href="#servicos" aria-label="Conhecer os serviços">
+          <span>Conhecer os serviços</span>
+        </a>
+      </div>
+    </div>
+
+    <a class="hero__scrollcue" href="#sobre" aria-label="Rolar para a próxima seção">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- divisor ritual -->
+  <div class="divider" aria-hidden="true">
+    <span class="divider__line"></span>
+    <svg class="divider__sigil" viewBox="0 0 24 24"><path d="M12 3l2.4 6.6L21 12l-6.6 2.4L12 21l-2.4-6.6L3 12l6.6-2.4z" fill="none" stroke="currentColor" stroke-width=".8"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/></svg>
+    <span class="divider__line"></span>
+  </div>
+
+  <!-- ══════════════════════════ 2 · QUEM É SAMAEL ══════════════════════════ -->
+  <section class="section about" id="sobre">
+    <div class="section__inner about__grid">
+      <div class="about__figure reveal" aria-hidden="true">
+        <!-- Retrato simbólico: moldura + serpente enrolada -->
+        <div class="about__frame">
+          <svg viewBox="0 0 340 460" class="about__art">
+            <defs>
+              <radialGradient id="portraitVoid" cx=".5" cy=".42" r=".75">
+                <stop offset="0" stop-color="#17171b"/>
+                <stop offset=".6" stop-color="#0c0c0f"/>
+                <stop offset="1" stop-color="#050505"/>
+              </radialGradient>
+              <linearGradient id="coilBody" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#191920"/>
+                <stop offset=".5" stop-color="#24242b"/>
+                <stop offset="1" stop-color="#0e0e11"/>
+              </linearGradient>
+            </defs>
+            <rect x="6" y="6" width="328" height="448" fill="url(#portraitVoid)"/>
+            <rect x="6" y="6" width="328" height="448" fill="none" stroke="#B8945A" stroke-width="1" opacity=".55"/>
+            <rect x="16" y="16" width="308" height="428" fill="none" stroke="#B8945A" stroke-width=".4" opacity=".35"/>
+            <!-- lua -->
+            <circle cx="170" cy="120" r="46" fill="none" stroke="#B8945A" stroke-width=".6" opacity=".5"/>
+            <path d="M150 158 A46 46 0 0 1 150 82 A36 36 0 0 0 150 158Z" fill="#B8945A" opacity=".18"/>
+            <!-- serpente enrolada em bastão -->
+            <path d="M170 90 v 290" stroke="#B8945A" stroke-width="1.4" opacity=".75"/>
+            <path d="M170 130 C 130 150, 130 185, 170 200 C 210 215, 210 250, 170 265 C 130 280, 130 315, 170 330"
+                  fill="none" stroke="url(#coilBody)" stroke-width="22" stroke-linecap="round"/>
+            <path d="M170 130 C 130 150, 130 185, 170 200 C 210 215, 210 250, 170 265 C 130 280, 130 315, 170 330"
+                  fill="none" stroke="#B8945A" stroke-width=".7" opacity=".4"/>
+            <circle cx="170" cy="128" r="2.6" fill="#B8945A"/>
+            <!-- estrelas -->
+            <g fill="#B8945A" opacity=".6">
+              <circle cx="70" cy="70" r="1.1"/><circle cx="280" cy="90" r="1.4"/><circle cx="60" cy="320" r="1.2"/>
+              <circle cx="285" cy="300" r="1"/><circle cx="100" cy="400" r="1.3"/><circle cx="250" cy="410" r="1.1"/>
+            </g>
+            <text x="170" y="432" text-anchor="middle" fill="#B8945A" opacity=".7" font-family="Cinzel, serif" font-size="13" letter-spacing="6">SERPENS NIGRA</text>
+          </svg>
+          <p class="about__frame-hint">· espaço reservado para retrato real ·</p>
+        </div>
+      </div>
+
+      <div class="about__text">
+        <p class="section__overline reveal">A persona</p>
+        <h2 class="section__title reveal">Quem é <em>Samael</em>?</h2>
+
+        <div class="prose reveal">
+          <p>Samael é a persona esotérica de Lennart, também chamado <strong>The Black Serpent</strong>. Uma presença construída entre simbolismo, sombra, lucidez e leitura das forças invisíveis que atravessam o desejo humano.</p>
+          <p>Não se apresenta como salvador, guru ou promessa fácil. Sua função é outra: revelar padrões, traduzir sinais, interpretar conflitos ocultos e conduzir o consulente a enxergar aquilo que sua própria mente tenta evitar.</p>
+          <p>Samael trabalha com tarot, análise simbólica, consultas espirituais, leitura de sombra e orientação esotérica para pessoas que buscam mais do que respostas superficiais.</p>
+        </div>
+
+        <div class="about__creed reveal">
+          <p>Aqui, o oculto não é fantasia.</p>
+          <p>É linguagem.</p>
+          <p>É espelho.</p>
+          <p>É estratégia de consciência.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ 3 · MANIFESTO ══════════════════════════ -->
+  <section class="section manifesto" id="manifesto">
+    <div class="manifesto__bg" aria-hidden="true"></div>
+    <div class="section__inner section__inner--narrow">
+      <p class="section__overline section__overline--center reveal">Manifesto</p>
+      <h2 class="section__title section__title--center reveal">A Serpente não consola.<br><em>A Serpente revela.</em></h2>
+
+      <div class="prose prose--center reveal">
+        <p>A Serpente Negra é símbolo de conhecimento proibido, transformação e renascimento. Ela rasteja onde os olhos comuns não alcançam. Entra nas frestas, nos desejos negados, nas verdades enterradas e nos vínculos que ainda prendem.</p>
+      </div>
+
+      <div class="manifesto__mirror reveal">
+        <p>Cada consulta é um espelho.</p>
+        <p class="soft">Nem sempre confortável.</p>
+        <p class="soft">Nem sempre doce.</p>
+        <p>Mas profundamente necessário.</p>
+      </div>
+
+      <div class="prose prose--center reveal">
+        <p>Porque existem momentos em que a vida não pede esperança cega.<br>
+        Pede leitura. Pede coragem. Pede direção.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true">
+    <span class="divider__line"></span>
+    <svg class="divider__sigil" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6" fill="none" stroke="currentColor" stroke-width=".8"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4" stroke="currentColor" stroke-width=".8"/></svg>
+    <span class="divider__line"></span>
+  </div>
+
+  <!-- ══════════════════════════ 4 · SERVIÇOS ══════════════════════════ -->
+  <section class="section services" id="servicos">
+    <div class="section__inner">
+      <p class="section__overline section__overline--center reveal">Atendimentos</p>
+      <h2 class="section__title section__title--center reveal">Serviços</h2>
+      <p class="section__lead reveal">Leituras para enxergar o que se oculta por trás do desejo.<br class="br-desktop"> Consultas para quem precisa de clareza antes de agir.</p>
+
+      <div class="services__grid">
+
+        <article class="card reveal">
+          <div class="card__symbol" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><rect x="14" y="8" width="20" height="32" rx="2" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="24" cy="24" r="5" fill="none" stroke="currentColor" stroke-width=".8"/><circle cx="24" cy="24" r="1.4" fill="currentColor"/><path d="M24 12v3M24 33v3M17 24h-1M32 24h-1" stroke="currentColor" stroke-width=".8"/></svg>
+          </div>
+          <h3 class="card__title">Tarot Direto</h3>
+          <p class="card__text">Uma leitura objetiva para perguntas específicas sobre amor, caminhos, decisões, bloqueios e situações que exigem clareza imediata.</p>
+          <a class="card__cta" href="#contato" data-whatsapp data-msg="Olá, Samael. Gostaria de agendar um Tarot Direto." aria-label="Consultar Tarot Direto agora">Consultar agora <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="card reveal" style="--stagger:1">
+          <div class="card__symbol" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M30 38 A16 16 0 1 1 30 10 A13 13 0 0 0 30 38Z" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="31" cy="18" r="1" fill="currentColor"/><circle cx="35" cy="26" r=".8" fill="currentColor"/></svg>
+          </div>
+          <h3 class="card__title">Tiragem de Sombra</h3>
+          <p class="card__text">Leitura voltada para padrões inconscientes, ciclos repetidos, medos, desejos ocultos e conflitos internos que influenciam suas escolhas.</p>
+          <a class="card__cta" href="#contato" data-whatsapp data-msg="Olá, Samael. Tenho interesse na Tiragem de Sombra." aria-label="Solicitar Tiragem de Sombra">Revelar a sombra <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="card reveal" style="--stagger:2">
+          <div class="card__symbol" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M8 24 C 14 15, 34 15, 40 24 C 34 33, 14 33, 8 24Z" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="24" cy="24" r="5" fill="none" stroke="currentColor" stroke-width=".9"/><circle cx="24" cy="24" r="1.6" fill="currentColor"/></svg>
+          </div>
+          <h3 class="card__title">Consulta Vampírica</h3>
+          <p class="card__text">Uma análise simbólica sobre energia, desejo, influência, presença, vínculos, drenagens emocionais e dinâmicas de poder nas relações.</p>
+          <a class="card__cta" href="#contato" data-whatsapp data-msg="Olá, Samael. Gostaria de solicitar uma Consulta Vampírica." aria-label="Solicitar Consulta Vampírica">Solicitar consulta <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="card reveal" style="--stagger:3">
+          <div class="card__symbol" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M24 6l4.2 11.5L40 24l-11.8 6.5L24 42l-4.2-11.5L8 24l11.8-6.5z" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="24" cy="24" r="2" fill="currentColor"/></svg>
+          </div>
+          <h3 class="card__title">Consulta Espiritual</h3>
+          <p class="card__text">Orientação esotérica para compreender caminhos, bloqueios, sinais, ciclos, abertura de possibilidades e direção espiritual.</p>
+          <a class="card__cta" href="#contato" data-whatsapp data-msg="Olá, Samael. Gostaria de uma Consulta Espiritual." aria-label="Falar com Samael sobre Consulta Espiritual">Falar com Samael <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="card reveal" style="--stagger:4">
+          <div class="card__symbol" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M24 8 C 18 16, 30 20, 24 28 C 18 36, 30 40, 24 44" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/><circle cx="24" cy="8" r="1.6" fill="currentColor"/><path d="M12 14h6M30 14h6M10 34h6M32 34h6" stroke="currentColor" stroke-width=".6" opacity=".7"/></svg>
+          </div>
+          <h3 class="card__title">Trabalhos Esotéricos</h3>
+          <p class="card__text">Atendimentos e práticas espirituais avaliados caso a caso, com seriedade, descrição e alinhamento simbólico.</p>
+          <a class="card__cta" href="#contato" data-whatsapp data-msg="Olá, Samael. Gostaria de enviar uma solicitação de trabalho esotérico." aria-label="Enviar solicitação de trabalho esotérico">Enviar solicitação <span aria-hidden="true">→</span></a>
+        </article>
+
+      </div>
+
+      <p class="services__ethics reveal">As consultas têm caráter simbólico, espiritual e orientativo. Não substituem acompanhamento médico, psicológico, jurídico ou financeiro.</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ 5 · COMO FUNCIONA ══════════════════════════ -->
+  <section class="section ritual" id="consultas">
+    <div class="section__inner section__inner--narrow">
+      <p class="section__overline section__overline--center reveal">O rito</p>
+      <h2 class="section__title section__title--center reveal">Como funciona a consulta</h2>
+
+      <ol class="ritual__steps">
+        <li class="ritual__step reveal">
+          <div class="ritual__marker" aria-hidden="true"><span>I</span></div>
+          <div class="ritual__body">
+            <h3>Primeiro contato</h3>
+            <p>Você entra em contato pelo WhatsApp ou e-mail e apresenta brevemente sua questão.</p>
+          </div>
+        </li>
+        <li class="ritual__step reveal">
+          <div class="ritual__marker" aria-hidden="true"><span>II</span></div>
+          <div class="ritual__body">
+            <h3>Escolha da consulta</h3>
+            <p>Samael indica o tipo de leitura mais adequado ao seu caso.</p>
+          </div>
+        </li>
+        <li class="ritual__step reveal">
+          <div class="ritual__marker" aria-hidden="true"><span>III</span></div>
+          <div class="ritual__body">
+            <h3>Pagamento e confirmação</h3>
+            <p>Após a confirmação, sua consulta é agendada ou realizada conforme a modalidade escolhida.</p>
+          </div>
+        </li>
+        <li class="ritual__step reveal">
+          <div class="ritual__marker" aria-hidden="true"><span>IV</span></div>
+          <div class="ritual__body">
+            <h3>Leitura e orientação</h3>
+            <p>Você recebe uma análise simbólica, direta e profunda, com foco em clareza, padrões e próximos passos.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ 6 · DIFERENCIAIS ══════════════════════════ -->
+  <section class="section why" id="diferenciais">
+    <div class="section__inner">
+      <p class="section__overline section__overline--center reveal">Diferenciais</p>
+      <h2 class="section__title section__title--center reveal">Por que consultar <em>Samael</em>?</h2>
+
+      <div class="why__grid">
+        <div class="why__item reveal">
+          <h3>Leitura simbólica profunda</h3>
+          <p>Tarot e ocultismo tratados como linguagem de interpretação, não como espetáculo vazio.</p>
+        </div>
+        <div class="why__item reveal" style="--stagger:1">
+          <h3>Estética e atmosfera ritualística</h3>
+          <p>Cada consulta é conduzida com presença, silêncio e intenção.</p>
+        </div>
+        <div class="why__item reveal" style="--stagger:2">
+          <h3>Clareza sem infantilização</h3>
+          <p>Respostas diretas, mas refinadas. Sem promessas falsas. Sem teatro barato.</p>
+        </div>
+        <div class="why__item reveal" style="--stagger:3">
+          <h3>Foco em padrões ocultos</h3>
+          <p>A leitura busca revelar o que se repete, o que prende e o que precisa ser encarado.</p>
+        </div>
+        <div class="why__item reveal" style="--stagger:4">
+          <h3>Atendimento reservado</h3>
+          <p>Consultas privadas, discretas e conduzidas com seriedade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ 7 · CARTAS E SÍMBOLOS ══════════════════════════ -->
+  <section class="section arcana" id="cartas">
+    <div class="arcana__bg" aria-hidden="true"></div>
+    <div class="section__inner">
+      <div class="arcana__spread" aria-hidden="true">
+
+        <div class="tarot tarot--1 reveal">
+          <div class="tarot__inner">
+            <svg viewBox="0 0 100 160" class="tarot__face">
+              <rect x="3" y="3" width="94" height="154" rx="4" fill="#0B0B0D" stroke="#B8945A" stroke-width="1"/>
+              <rect x="9" y="9" width="82" height="142" rx="2" fill="none" stroke="#B8945A" stroke-width=".4" opacity=".6"/>
+              <text x="50" y="24" text-anchor="middle" fill="#B8945A" font-family="Cinzel,serif" font-size="8" letter-spacing="2">XIII</text>
+              <path d="M50 50 C 38 62, 62 72, 50 84 C 38 96, 62 106, 50 118" fill="none" stroke="#B8945A" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="50" cy="48" r="2.5" fill="#B8945A"/>
+              <g fill="#B8945A" opacity=".55"><circle cx="24" cy="60" r="1"/><circle cx="76" cy="70" r="1.2"/><circle cx="26" cy="110" r="1"/><circle cx="74" cy="118" r="1"/></g>
+              <text x="50" y="144" text-anchor="middle" fill="#B8945A" font-family="Cinzel,serif" font-size="7" letter-spacing="3">A SERPENTE</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="tarot tarot--2 reveal" style="--stagger:1">
+          <div class="tarot__inner">
+            <svg viewBox="0 0 100 160" class="tarot__face">
+              <rect x="3" y="3" width="94" height="154" rx="4" fill="#0B0B0D" stroke="#B8945A" stroke-width="1"/>
+              <rect x="9" y="9" width="82" height="142" rx="2" fill="none" stroke="#B8945A" stroke-width=".4" opacity=".6"/>
+              <text x="50" y="24" text-anchor="middle" fill="#B8945A" font-family="Cinzel,serif" font-size="8" letter-spacing="2">XIX</text>
+              <circle cx="50" cy="82" r="16" fill="none" stroke="#B8945A" stroke-width="1.4"/>
+              <circle cx="50" cy="82" r="4" fill="#B8945A"/>
+              <g stroke="#B8945A" stroke-width="1"><path d="M50 56v8M50 100v8M24 82h8M68 82h8M32 64l6 6M62 94l6 6M68 64l-6 6M38 94l-6 6"/></g>
+              <text x="50" y="144" text-anchor="middle" fill="#B8945A" font-family="Cinzel,serif" font-size="7" letter-spacing="3">O SOL NEGRO</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="tarot tarot--3 reveal" style="--stagger:2">
+          <div class="tarot__inner">
+            <svg viewBox="0 0 100 160" class="tarot__face">
+              <rect x="3" y="3" width="94" height="154" rx="4" fill="#0B0B0D" stroke="#B8945A" stroke-width="1"/>
+              <rect x="9" y="9" width="82" height="142" rx="2" fill="none" stroke="#B8945A" stroke-width=".4" opacity=".6"/>
+              <text x="50" y="24" text-anchor="middle" fill="#B8945A" font-family="Cinzel,serif" font-size="8" letter-spacing="2">XVIII</text>
+              <path d="M60 106 A28 28 0 1 1 60 58 A22 22 0 0 0 60 106Z" fill="none" stroke="#B8945A" stroke-width="1.4"/>
+              <g fill="#B8945A" opacity=".7"><circle cx="63" cy="70" r="1.2"/><circle cx="68" cy="84" r="1"/><circle cx="63" cy="96" r="1.1"/></g>
+              <text x="50" y="144" text-anchor="middle" fill="#B8945A" font-family="Cinzel,serif" font-size="7" letter-spacing="3">A LUA</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="tarot tarot--4 reveal" style="--stagger:3">
+          <div class="tarot__inner">
+            <svg viewBox="0 0 100 160" class="tarot__face">
+              <rect x="3" y="3" width="94" height="154" rx="4" fill="#0B0B0D" stroke="#B8945A" stroke-width="1"/>
+              <rect x="9" y="9" width="82" height="142" rx="2" fill="none" stroke="#B8945A" stroke-width=".4" opacity=".6"/>
+              <text x="50" y="24" text-anchor="middle" fill="#B8945A" font-family="Cinzel,serif" font-size="8" letter-spacing="2">∅</text>
+              <path d="M28 82 C 36 66, 64 66, 72 82 C 64 98, 36 98, 28 82Z" fill="none" stroke="#B8945A" stroke-width="1.3"/>
+              <circle cx="50" cy="82" r="7" fill="none" stroke="#B8945A" stroke-width="1"/>
+              <circle cx="50" cy="82" r="2.4" fill="#B8945A"/>
+              <text x="50" y="144" text-anchor="middle" fill="#B8945A" font-family="Cinzel,serif" font-size="7" letter-spacing="3">O ABISMO</text>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="arcana__caption reveal">
+        <p>As cartas não decidem por você.</p>
+        <p><em>Elas revelam o que já se move no invisível.</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ 8 · FRASES ══════════════════════════ -->
+  <section class="section oracle" id="frases" aria-label="Frases">
+    <div class="section__inner section__inner--narrow">
+      <div class="oracle__frame">
+        <span class="oracle__corner oracle__corner--tl" aria-hidden="true"></span>
+        <span class="oracle__corner oracle__corner--tr" aria-hidden="true"></span>
+        <span class="oracle__corner oracle__corner--bl" aria-hidden="true"></span>
+        <span class="oracle__corner oracle__corner--br" aria-hidden="true"></span>
+        <blockquote class="oracle__quote" id="oracleQuote" aria-live="polite">
+          “Nem toda luz cura. Algumas apenas expõem.”
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ 9 · CONVERSÃO ══════════════════════════ -->
+  <section class="section summon" id="chamado">
+    <div class="summon__bg" aria-hidden="true"></div>
+    <div class="section__inner section__inner--narrow">
+      <h2 class="section__title section__title--center reveal">Se a dúvida insiste,<br><em>talvez ela esteja tentando revelar algo.</em></h2>
+      <div class="prose prose--center reveal">
+        <p>Você pode ignorar o sinal, repetir o ciclo ou olhar diretamente para aquilo que está pedindo consciência.</p>
+        <p class="summon__ready">Quando estiver pronto, a consulta começa.</p>
+      </div>
+      <div class="summon__actions reveal">
+        <a class="btn btn--gold" href="#contato" data-whatsapp data-msg="Olá, Samael. Estou pronto para uma consulta." aria-label="Chamar no WhatsApp">
+          <span>Chamar no WhatsApp</span>
+        </a>
+        <a class="btn btn--ghost" href="#contato" data-email data-subject="Solicitação de consulta" aria-label="Enviar e-mail">
+          <span>Enviar e-mail</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ 10 · CONTATO ══════════════════════════ -->
+  <section class="section contact" id="contato">
+    <div class="section__inner section__inner--narrow">
+      <p class="section__overline section__overline--center reveal">O chamado</p>
+      <h2 class="section__title section__title--center reveal">Contato</h2>
+      <div class="prose prose--center reveal">
+        <p>Para consultas, tiragens ou solicitações espirituais, envie uma mensagem com <strong>seu nome</strong>, <strong>sua questão</strong> e o <strong>tipo de atendimento desejado</strong>.</p>
+      </div>
+
+      <div class="contact__channels reveal">
+        <a class="channel" href="#" data-whatsapp data-msg="Olá, Samael. Meu nome é ____. Minha questão: ____. Atendimento desejado: ____." aria-label="Falar com Samael no WhatsApp">
+          <svg viewBox="0 0 32 32" class="channel__icon" aria-hidden="true">
+            <path d="M16 4a12 12 0 0 0-10.3 18.1L4 28l6.1-1.6A12 12 0 1 0 16 4Zm0 2.2a9.8 9.8 0 1 1-5 18.2l-.6-.35-3.6.95.96-3.5-.4-.63A9.8 9.8 0 0 1 16 6.2Zm-3.7 4.9c-.24 0-.6.09-.9.42-.3.33-1.18 1.15-1.18 2.8 0 1.65 1.2 3.25 1.37 3.47.17.22 2.35 3.75 5.8 5.1 2.87 1.13 3.45.9 4.07.85.62-.06 2-.82 2.3-1.6.28-.8.28-1.47.2-1.6-.08-.15-.3-.23-.64-.4-.33-.17-2-.98-2.3-1.1-.3-.1-.53-.16-.75.18-.22.33-.86 1.08-1.05 1.3-.2.23-.4.25-.72.09-.33-.17-1.4-.52-2.66-1.65a10 10 0 0 1-1.84-2.3c-.2-.33-.02-.51.14-.68.15-.15.34-.4.5-.6.17-.2.23-.34.34-.56.1-.23.05-.43-.03-.6-.08-.17-.73-1.8-1.03-2.46-.27-.6-.55-.6-.76-.6Z" fill="currentColor"/>
+          </svg>
+          <span class="channel__label">Falar com Samael no WhatsApp</span>
+          <span class="channel__value" data-contact-phone-display>+55 (61) 99311-8272</span>
+        </a>
+
+        <a class="channel" href="#" data-email data-subject="Solicitação de consulta" aria-label="Enviar e-mail para Samael">
+          <svg viewBox="0 0 32 32" class="channel__icon" aria-hidden="true">
+            <rect x="4" y="7" width="24" height="18" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M5 9l11 8 11-8" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          </svg>
+          <span class="channel__label">Enviar e-mail</span>
+          <span class="channel__value" data-contact-email-display>darksage.yy@gmail.com</span>
+        </a>
+      </div>
+
+      <!-- Links sociais — edite em js/main.js (CONFIG.social) -->
+      <div class="contact__social reveal" id="socialLinks" aria-label="Redes sociais"></div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ══════════════════════════ 11 · FOOTER ══════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <svg class="footer__sigil" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="9" fill="none" stroke="currentColor" stroke-width=".8"/>
+          <circle cx="20" cy="20" r="2.4" fill="currentColor"/>
+          <g stroke="currentColor" stroke-width=".7"><path d="M20 4v5M20 31v5M4 20h5M31 20h5M9 9l3.5 3.5M27.5 27.5L31 31M31 9l-3.5 3.5M12.5 27.5L9 31"/></g>
+        </svg>
+        <p class="footer__name">SAMAEL</p>
+        <p class="footer__aka">Lennart · The Black Serpent</p>
+      </div>
+
+      <nav class="footer__links" aria-label="Links do rodapé">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#consultas">Consultas</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <p class="footer__omen">“O abismo não responde a todos. Apenas aos que ousam olhar de volta.”</p>
+      <p class="footer__legal">© <span id="year">2026</span> Samael · Todos os direitos reservados. Consultas de caráter simbólico e orientativo.</p>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante de WhatsApp -->
+  <a class="whatsapp-float" href="#" data-whatsapp data-msg="Olá, Samael. Gostaria de agendar uma consulta." aria-label="Falar com Samael no WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M16 4a12 12 0 0 0-10.3 18.1L4 28l6.1-1.6A12 12 0 1 0 16 4Zm0 2.2a9.8 9.8 0 1 1-5 18.2l-.6-.35-3.6.95.96-3.5-.4-.63A9.8 9.8 0 0 1 16 6.2Zm-3.7 4.9c-.24 0-.6.09-.9.42-.3.33-1.18 1.15-1.18 2.8 0 1.65 1.2 3.25 1.37 3.47.17.22 2.35 3.75 5.8 5.1 2.87 1.13 3.45.9 4.07.85.62-.06 2-.82 2.3-1.6.28-.8.28-1.47.2-1.6-.08-.15-.3-.23-.64-.4-.33-.17-2-.98-2.3-1.1-.3-.1-.53-.16-.75.18-.22.33-.86 1.08-1.05 1.3-.2.23-.4.25-.72.09-.33-.17-1.4-.52-2.66-1.65a10 10 0 0 1-1.84-2.3c-.2-.33-.02-.51.14-.68.15-.15.34-.4.5-.6.17-.2.23-.34.34-.56.1-.23.05-.43-.03-.6-.08-.17-.73-1.8-1.03-2.46-.27-.6-.55-.6-.76-.6Z" fill="currentColor"/>
+    </svg>
+  </a>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
